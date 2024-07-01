@@ -14,6 +14,10 @@ export default defineConfig({
         target: `http://localhost:${PORT}`,
         changeOrigin: true,
       },
+      '/socket.io': {
+        target: `http://localhost:${PORT}`,
+        changeOrigin: true,
+      },
     },
   },
   build: {
