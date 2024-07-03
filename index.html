@@ -5,33 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/src/app/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <script src="http://localhost:3001/socket.io/socket.io.js"></script>
     <script>
-      // Connect to the Socket.IO server
-      const socket = io('http://localhost:3001');
-  
-      // Handle connection event
-      socket.on('connect', () => {
-        console.log('Connected to the server');
-      });
-  
-      // Handle incoming messages
-      socket.on('message', (msg) => {
-        console.log('event name [message], Message received:', msg);
-      });
-
-      socket.on('test', (msg) => {
-        console.log('event name [test], Message received:', msg);
-      });
-  
-      // Handle disconnection event
-      socket.on('disconnect', () => {
-        console.log('Disconnected from the server');
-      });
-
-      setInterval(() => {
-        socket.emit('message', 'from client')
-      }, 1000);
     </script>
   </head>
   <body>
