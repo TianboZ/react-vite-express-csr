@@ -1,6 +1,5 @@
 import express from 'express';
 import router from './router';
-import path from 'path';
 
 const { PORT = 3001 } = process.env;
 
@@ -17,7 +16,7 @@ app.use(express.static('dist/app'));
 
 // Handle client routing, return all requests to the app
 app.get('*', (_req, res) => {
-  res.sendFile(path.join(__dirname, 'app/index.html'));
+  res.send('<p>hello</p>');
 });
 
 app.listen(PORT, () => {
